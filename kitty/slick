@@ -1,0 +1,13 @@
+# Create a new tab
+new_tab CHILL
+
+# Set the working directory for windows in the current tab
+cd ~
+
+launch --location=vsplit zsh
+cd ~
+launch --location=vsplit spotify_player
+cd ~ 
+launch --location=vsplit cmatrix
+cd ~
+launch --location=vsplit zsh

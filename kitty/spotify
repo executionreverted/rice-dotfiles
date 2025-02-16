@@ -1,0 +1,32 @@
+# Set the layout for the current tab
+layout stack
+# Set the working directory for windows in the current tab
+# Create a window and run the specified command in it
+# Run a short lived command and see its output
+launch zsh
+
+# Create a new window
+new_os_window
+# Set the layouts allowed in this tab
+# Set the current layout
+os_window_size 80c 12c
+launch zsh
+
+# Create a new OS window
+# Any definitions specified before the first new_os_window will apply to first OS window.
+new_os_window
+# Set new window size to 80x24 cells
+os_window_size 80c 12c
+# Set the --class for the new OS window
+os_window_class mywindow
+# Change the OS window state to normal, fullscreen, maximized or minimized
+os_window_state normal
+launch zsh
+
+# Resize the current window (see the resize_window action for details)
+resize_window wider 2
+# Make the current window the active (focused) window in its tab
+focus
+# Make the current OS Window the globally active window (not supported on Wayland)
+focus_os_window
+launch spotify_player
