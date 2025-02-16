@@ -7,7 +7,7 @@ cd ~
 launch --location=vsplit zsh
 cd ~
 launch --location=vsplit spotify_player
-cd ~ 
+cd ~
 launch --location=vsplit cmatrix
 cd ~
 launch --location=vsplit zsh
