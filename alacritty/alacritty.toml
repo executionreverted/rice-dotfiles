@@ -1,0 +1,28 @@
+# Alacritty Configuration (TOML)
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGS NF"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS NF"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGS NF"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0

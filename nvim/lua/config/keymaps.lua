@@ -78,3 +78,6 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap.set("n", "<leader>f", vim.lsp.buf.format)
+keymap.set({ "n", "x" }, "y", "<Plug>(YankyYank)")
+keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
