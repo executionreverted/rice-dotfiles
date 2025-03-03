@@ -8,7 +8,7 @@ launch --location=vsplit zsh
 cd ~
 launch --location=vsplit zsh
 cd ~
-launch --location=vsplit spotify_player
+launch --location=vsplit zsh 
 cd ~
 launch --location=vsplit zsh
 cd ~
