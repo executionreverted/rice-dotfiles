@@ -1,28 +1,31 @@
 return {
   -- add catpuccin
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   opts = {
+  --
+  --     transparent_background = true,
+  --     transparent = true,
+  --     integrations = {
+  --       alpha = true,
+  --       aerial = true,
+  --       dap = true,
+  --       dap_ui = true,
+  --       mason = true,
+  --       neotree = true,
+  --       notify = true,
+  --       nvimtree = false,
+  --       semantic_tokens = true,
+  --       symbols_outline = true,
+  --       telescope = true,
+  --       ts_rainbow = false,
+  --       which_key = true,
+  --     },
+  --   },
+  -- },
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-
-      transparent_background = true,
-      transparent = true,
-      integrations = {
-        alpha = true,
-        aerial = true,
-        dap = true,
-        dap_ui = true,
-        mason = true,
-        neotree = true,
-        notify = true,
-        nvimtree = false,
-        semantic_tokens = true,
-        symbols_outline = true,
-        telescope = true,
-        ts_rainbow = false,
-        which_key = true,
-      },
-    },
+    "executionreverted/nvimgelion",
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -39,7 +42,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "nvimgelion",
     },
   },
 }

@@ -4,12 +4,11 @@ new_tab CHILL
 # Set the working directory for windows in the current tab
 cd ~
 
-launch --location=vsplit zsh
-cd ~
-launch --location=vsplit zsh
-cd ~
 launch --location=vsplit zsh 
 cd ~
 launch --location=vsplit zsh
 cd ~
 launch --location=vsplit zsh
+cd ~
+launch --location=vsplit zsh
+focus

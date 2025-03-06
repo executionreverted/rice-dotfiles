@@ -14,3 +14,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+vim.api.nvim_create_autocmd({ "ColorScheme", "FileType" }, {
+  callback = function()
+    vim.cmd([[
+      hi Normal guifg=NONE guibg=NONE,
+      hi StatusLine guifg=NONE guibg=NONE
+    ]])
+  end,
+})
