@@ -23,6 +23,42 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = function()
+        require("lualine").setup({
+          options = {
+            theme = {
+              normal = {
+                a = { fg = "#14091e", bg = "#CE67F0", gui = "bold" },
+                b = { fg = "#E1D6F8", bg = "#201430" },
+                c = { fg = "#A4D2EC", bg = "#14091e" },
+              },
+              insert = {
+                a = { fg = "#14091e", bg = "#87ff5f", gui = "bold" },
+              },
+              visual = {
+                a = { fg = "#14091e", bg = "#DB6088", gui = "bold" },
+              },
+              replace = {
+                a = { fg = "#14091e", bg = "#D99145", gui = "bold" },
+              },
+              command = {
+                a = { fg = "#14091e", bg = "#E6BB85", gui = "bold" },
+              },
+              inactive = {
+                a = { fg = "#875faf", bg = "#14091e" },
+                b = { fg = "#9DAFD1", bg = "#14091e" },
+                c = { fg = "#3B3847", bg = "#14091e" },
+              },
+            },
+            component_separators = { left = "", right = "" },
+            section_separators = { left = "", right = "" },
+          },
+        })
+      end,
+    },
+    {
       "pmizio/typescript-tools.nvim",
       dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
       opts = {},
