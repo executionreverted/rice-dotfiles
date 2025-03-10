@@ -241,3 +241,4 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 
 alias txk="tmux kill-server"
+alias lgt="lazygit"
