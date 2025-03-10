@@ -5,10 +5,10 @@ volume_slider=(
   updates=on
   label.drawing=off
   icon.drawing=off
-  slider.highlight_color=$BLUE
+  slider.highlight_color=$RED
   slider.background.height=5
   slider.background.corner_radius=3
-  slider.background.color=$BACKGROUND_2
+  slider.background.color=$ORANGE
   slider.knob=􀀁
   slider.knob.drawing=on
 )

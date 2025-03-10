@@ -1,6 +1,6 @@
 # Alacritty Configuration (TOML)
 [window]
-opacity = 0.92
+opacity = 0.75
 decorations = "None"
 
 [window.padding]
