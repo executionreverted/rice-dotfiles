@@ -6,8 +6,8 @@ source "$CONFIG_DIR/icons.sh"  # Loads all defined icons
 ITEM_DIR="$CONFIG_DIR/items"     # Directory where the items are configured
 PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
 
-FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
-PADDINGS=3    # All paddings use this value (icon, label, background)
+FONT="MesloLGS NF" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+PADDINGS=12        # All paddings use this value (icon, label, background)
 
 # aerospace setting
 AEROSPACE_FOCUSED_MONITOR_NO=$(aerospace list-workspaces --focused)
@@ -36,7 +36,7 @@ bar=(
   y_offset=-5
   margin=-2
   topmost=window
-  color=0x00000000
+  color=0x99000000
   border_color=0x00000000
 )
 
@@ -53,20 +53,20 @@ defaults=(
   label.color=$LABEL_COLOR
   label.padding_left=$PADDINGS
   label.padding_right=$PADDINGS
-  label.shadow.drawing=on
+  label.shadow.drawing=off
   label.shadow.distance=2
   label.shadow.color=0xff000000
   padding_right=$PADDINGS
   padding_left=$PADDINGS
   background.height=26
-  background.corner_radius=9
+  background.corner_radius=0
   background.border_width=2
   popup.background.border_width=2
-  popup.background.corner_radius=9
+  popup.background.corner_radius=0
   popup.background.border_color=$POPUP_BORDER_COLOR
   popup.background.color=$POPUP_BACKGROUND_COLOR
   popup.blur_radius=20
-  popup.background.shadow.drawing=on
+  popup.background.shadow.drawing=off
   scroll_texts=on
 
 )
@@ -91,7 +91,7 @@ source "$ITEM_DIR/battery.sh"
 #source "$ITEM_DIR/github.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/volume.sh"
-#source "$ITEM_DIR/svim.sh"
+source "$ITEM_DIR/svim.sh"
 
 source "$ITEM_DIR/cpu.sh"
 source "$ITEM_DIR/weather.sh"
