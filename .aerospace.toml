@@ -1,9 +1,9 @@
 after-login-command = []
 
 exec-on-workspace-change = [
-    '/bin/bash',
-    '-c',
-    '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change AEROSPACE_FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE AEROSPACE_PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+  '/bin/bash',
+  '-c',
+  '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change AEROSPACE_FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE AEROSPACE_PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
 ]
 
 start-at-login = true
@@ -11,19 +11,20 @@ accordion-padding = 30
 non-empty-workspaces-root-containers-layout-on-startup = 'smart'
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
+automatically-unhide-macos-hidden-apps = true
 
 gaps.inner.horizontal = 6
 gaps.inner.vertical = 6
 gaps.outer.left = 12
 gaps.outer.bottom = 12
-gaps.outer.top = 16
+gaps.outer.top = 40
 gaps.outer.right = 12
 
 # Run Sketchybar together with AeroSpace
 # sketchbar has a built-in detection of already running process,
 # so it won't be run twice on AeroSpace restart
 after-startup-command = [
-	'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+  'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
 ]
 
 
@@ -41,6 +42,8 @@ alt-comma = 'layout accordion horizontal vertical'
 alt-f = 'fullscreen'
 cmd-alt-r = 'reload-config'
 cmd-h = []
+
+cmd-shift-d = 'exec-and-forget open -a Alacritty'
 
 
 ctrl-alt-shift-cmd-n = 'workspace next'
@@ -79,8 +82,8 @@ alt-shift-backspace = 'mode service'
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 f = [
-	'layout floating tiling',
-	'mode main',
+  'layout floating tiling',
+  'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 esc = 'mode main'
@@ -151,17 +154,21 @@ run = ['move-node-to-workspace terminal']
 ## move to dev workspace
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
-run = ['move-node-to-workspace dev']
+run = ['move-node-to-workspace fun']
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = ['move-node-to-workspace dev']
+run = ['move-node-to-workspace fun']
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
-run = ['move-node-to-workspace dev']
+run = ['move-node-to-workspace fun']
 [[on-window-detected]]
 if.app-id = 'com.vivaldi.Vivaldi'
-run = ['move-node-to-workspace dev']
+run = ['move-node-to-workspace fun']
 
+
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = ['move-node-to-workspace dev']
 ##move to space todo
 [[on-window-detected]]
 if.app-id = 'com.readdle.CalendarsLite'
